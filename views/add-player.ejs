@@ -1,0 +1,42 @@
+<% include partials/header.ejs %>
+    <div class="container">
+        <% if (message != '') { %>
+            <p class="text-center text-danger"><%= message %></p>
+        <% } %>
+        <form class="add-player-form" action="" method="post" enctype="multipart/form-data">
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <input type="text" class="form-control" name="first_name" id="first-name" placeholder="Primeiro nome" required>
+                </div>
+                <div class="form-group col-md-4">
+                    <input type="text" class="form-control" name="last_name" id="last-name" placeholder="Segundo nome" required>
+                </div>
+                <div class="form-group col-md-4">
+                    <input type="text" class="form-control" name="username" id="username" placeholder="Username" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <input type="number" class="form-control" name="number" id="number" placeholder="Número" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <select id="position" name="position" class="form-control" required>
+                        <option selected disabled>Posição</option>
+                        <option>MID</option>
+                        <option>SUPORTE</option>
+                        <option>ADC</option>
+                        <option>JUNGLE</option>
+                        <option>TOP</option>
+                    </select>
+                </div>
+                <div class="col-md-12">
+                    <label for="player-img"><b>Imagem do Player</b></label><br>
+                    <input type="file" name="image" id="player-img" class="" required>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary float-right">Add Player</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
